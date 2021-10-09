@@ -6,13 +6,10 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Peter\\Tzapi\\": "src/"
+            "Peter\\TzApi\\": "src/"
         }
     },
     "autoload-dev": {
-        "psr-4": {
-            "Peter\\Tzapi\\Tests\\": "tests/"
-        }
     },
     "require": {
         "lcobucci/jwt": "^3.4",
