@@ -24,7 +24,7 @@ var_dump($api->getschoolcode());
 //var_dump($api->loginByMobile(['mobile' => $mobile, 'code' => $code]));
 
 
-//var_dump($api->isUserExist('18557515452'));
+//var_dump($api->isUserExist(''));
 
 //var_dump($api->getnetmarketjobs(['jobid' => 10130, 'marketid' => 7, 'page' => 1, 'size' => 20]));
 //var_dump($api->getJobInfo(10130));
