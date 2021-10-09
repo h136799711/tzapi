@@ -1,6 +1,6 @@
 <?php
 
-namespace Peter\TzApi;
+namespace PeterAsasi\TzApi;
 
 use by\infrastructure\helper\CallResultHelper;
 

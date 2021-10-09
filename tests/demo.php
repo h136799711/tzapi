@@ -2,8 +2,8 @@
 
 require_once './vendor/autoload.php';
 
-use Peter\TzApi\TzConfig;
-use Peter\TzApi\UnionApi;
+use PeterAsasi\TzApi\TzConfig;
+use PeterAsasi\TzApi\UnionApi;
 
 $cfg = new TzConfig('', '');
 $api = new UnionApi($cfg);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Peter\TzApi;
+namespace PeterAsasi\TzApi;
 
 class TzConfig
 {

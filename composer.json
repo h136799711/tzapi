@@ -1,12 +1,12 @@
 {
-    "name": "peter/tzapi",
+    "name": "peter_asasi/tzapi",
     "description": "none",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Peter\\TzApi\\": "src/"
+            "PeterAsasi\\TzApi\\": "src/"
         }
     },
     "autoload-dev": {
