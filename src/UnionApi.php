@@ -248,6 +248,29 @@ class UnionApi extends BaseApi
         ]);
     }
 
+    /**
+     *
+     * //        name	姓名或联系人，必填
+     * //mobile	手机号码，必填
+     * school	学校
+     * spec	专业
+     * code	手机验证码，必填
+     * agree	是否同意
+     * @param $data
+     * @return \by\infrastructure\base\CallResult
+     */
+    public function register($name, $mobile, $school, $spec, $code)
+    {
+        $data = ['agree' => 1];
+        $data['name'] = $name;
+        $data['mobile'] = $mobile;
+        $data['school'] = $school;
+        $data['spec'] = $spec;
+        $data['code'] = $code;
+
+        return $this->wrapResult('/regist', $data, 'account');
+    }
+
     public function isUserExist($mobile, $way = 'regist')
     {
         //way	手机号码查询必选，选项为worker（普工）,company（企业），person（个人），regist（注册），login（登录）
