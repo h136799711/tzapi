@@ -256,8 +256,9 @@ class UnionApi extends BaseApi
         $this->setToken($token);
         $this->setUserid($userid);
         return $this->wrapResult('/userinfo', [
-            'day' => $day,
-        ]);
+            'way' => 'get',
+            'day' => $day
+        ], 'account');
     }
 
     /**
@@ -297,7 +298,7 @@ class UnionApi extends BaseApi
      * @param int[] $data
      * @return \by\infrastructure\base\CallResult
      */
-    protected function visitlog(array $data = [
+    public function visitlog(array $data = [
         'page' => 1,
         'size' => 20
     ])
@@ -306,9 +307,9 @@ class UnionApi extends BaseApi
         return $this->wrapResult('/visitlog', $data, 'data');
     }
 
-    public function wrapResult($service, $data = [], $checkSucKey = 'info')
+    public function wrapResult($service, $data = [], $checkSucKey = 'info', $method = 'post')
     {
-        $ret = $this->request($service, $data);
+        $ret = $this->request($service, $data, $method);
         if ($ret->isFail()) return $ret;
         $json = json_decode($ret->getData(), JSON_OBJECT_AS_ARRAY);
         if (is_array($json) && array_key_exists('msg', $json) && $json['msg'] == 'success') {
