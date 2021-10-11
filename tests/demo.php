@@ -5,7 +5,7 @@ require_once './vendor/autoload.php';
 use PeterAsasi\TzApi\TzConfig;
 use PeterAsasi\TzApi\UnionApi;
 
-$cfg = new TzConfig('xixunyun', '342DFDWROOIGGMM3234232DFDKLDFD234D');
+$cfg = new TzConfig('', '');
 $api = new UnionApi($cfg);
 $mobile = '';
 $code = '092110';
