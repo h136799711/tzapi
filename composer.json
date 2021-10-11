@@ -14,6 +14,7 @@
     "require": {
         "lcobucci/jwt": "^3.4",
         "itboye/component_http": "^1.1",
-        "dbh/core": "^1.2"
+        "dbh/core": "^1.2",
+        "ext-json": "*"
     }
 }

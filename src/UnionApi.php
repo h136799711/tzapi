@@ -171,6 +171,18 @@ class UnionApi extends BaseApi
         return $this->wrapResult('/editresume', array_merge(['id' => $id], $po->toArray()));
     }
 
+    public function createResumeByArray($data)
+    {
+        return $this->editResumeByArray(0, $data);
+    }
+
+
+    public function editResumeByArray($id, $data)
+    {
+        $data['id'] = $id;
+        return $this->wrapResult('/editresume', $data);
+    }
+
     public function applyjob($data = [
         'from' => 'net',
         //        from	来源，值为net(网络),market(现场招聘会)
@@ -285,7 +297,7 @@ class UnionApi extends BaseApi
      * @param int[] $data
      * @return \by\infrastructure\base\CallResult
      */
-    protected function visitlog($data = [
+    protected function visitlog(array $data = [
         'page' => 1,
         'size' => 20
     ])
@@ -294,7 +306,7 @@ class UnionApi extends BaseApi
         return $this->wrapResult('/visitlog', $data, 'data');
     }
 
-    protected function wrapResult($service, $data = [], $checkSucKey = 'info')
+    public function wrapResult($service, $data = [], $checkSucKey = 'info')
     {
         $ret = $this->request($service, $data);
         if ($ret->isFail()) return $ret;
