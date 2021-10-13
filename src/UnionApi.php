@@ -133,7 +133,7 @@ class UnionApi extends BaseApi
 //orderid	现场招聘会预定编号
         $data['page'] = $page;
         $data['size'] = $size;
-        return $this->wrapResult('/applydata', $data, 'resume');
+        return $this->wrapResult('/applydata', $data, 'data');
     }
 
     public function queryResume($data = [
