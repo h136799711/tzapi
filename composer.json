@@ -12,7 +12,7 @@
     "autoload-dev": {
     },
     "require": {
-        "lcobucci/jwt": "^3.4",
+        "lcobucci/jwt": "4.1.*",
         "itboye/component_http": "^1.1",
         "dbh/core": "^1.2",
         "ext-json": "*"
